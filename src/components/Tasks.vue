@@ -1,5 +1,5 @@
 <template >
-  <div class="container border rounded-lg mx-auto mt-10">
+  <div class="container border rounded-lg mx-auto mt-5">
     <ul>
       <li class="hover:bg-indigo-100" v-for="item in items" :key="item.id">
         <div class="grid mx-3 py-5 border-b cursor-pointer" style="grid-template-columns: 1fr auto;">
@@ -15,10 +15,10 @@
             </div>
           </div>
           <div class="status flex justify-center items-center p-2 ml-2">
-            <div class="checkbox">
-              <input type="checkbox" id="checkbox" v-model="item.completed">
-              <label for="checkbox"></label>
-            </div>
+            <label class="check">
+              <input type="checkbox" v-model="item.completed"/>
+              <div class="box"></div>
+            </label>
           </div>
         </div>
       </li>
@@ -87,5 +87,7 @@ export default {
     max-width: 200px;
   }
 }
+
+
 
 </style>

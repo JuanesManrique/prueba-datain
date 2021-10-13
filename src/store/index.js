@@ -4,7 +4,6 @@ import axios from 'axios'
 export default createStore({
   state: {
     itemsTasks: [],
-    holaMundo: 'hola mundo 12345'
   },
   actions: {
     getItems ({commit}) {
