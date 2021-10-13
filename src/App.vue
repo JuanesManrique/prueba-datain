@@ -1,16 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="p-5">
+    <div class="flex justify-center">
+      <img alt="Datain Logo" src="./assets/logo-datain.png" style="width: 300px;"/>
+    </div>
+    <div class="todos">
+      <Tasks/>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Tasks from './components/Tasks.vue';
 
 export default {
   name: "App",
-  components: {
-    HelloWorld,
-  },
+  components: { Tasks },
+
+  /* computed: {
+    texto() {
+      return this.$store.state.holaMundo
+    },
+  }, */
 };
 </script>
 
@@ -19,8 +29,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding: 0;
+  margin: 0;
 }
 </style>
