@@ -1,7 +1,7 @@
 <template >
   <div class="container border rounded-lg mx-auto mt-5">
     <ul>
-      <li class="hover:bg-indigo-100" v-for="item in items" :key="item.id">
+      <li :class="{'hover:bg-indigo-50': true, selected: item.completed }" v-for="item in items" :key="item.id">
         <div class="grid mx-3 py-5 border-b cursor-pointer" style="grid-template-columns: 1fr auto;">
           <div class="w-full flex items-center">
             <div class="w-max">
@@ -86,6 +86,10 @@ export default {
   .title {
     max-width: 200px;
   }
+}
+
+.selected {
+  background-color: #A7F3D0;
 }
 
 
